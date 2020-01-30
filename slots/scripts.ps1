@@ -13,13 +13,13 @@ az functionapp deployment slot create --name $funcappname -g $group --slot stagi
 dotnet clean
 dotnet build
 
-func azure functionapp publish $funcappname --force
+func azure functionapp publish $funcappname --force --csharp
 
 # modify code (B)
 dotnet clean
 dotnet build
 
-func azure functionapp publish $funcappname --slot staging --force
+func azure functionapp publish $funcappname --slot staging --force --csharp
 
 # swap B into prod, A into staging
 az functionapp deployment slot swap -g $group -n $funcappname --slot staging --target-slot production 
