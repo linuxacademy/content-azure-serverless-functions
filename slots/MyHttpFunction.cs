@@ -17,7 +17,7 @@ namespace slots
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            return (ActionResult)new OkObjectResult($"Good");
+            return (ActionResult)new OkObjectResult($"A");
         }
     }
 }
