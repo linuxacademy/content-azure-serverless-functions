@@ -3,7 +3,7 @@ az login
 $funcappname = $(az functionapp list --query "name" -o tsv)
 $funcappname
 
-$group = "functions"
+$group = $(az group list --query "name" -o tsv)
 
 az functionapp deployment slot create --name $funcappname -g $group
 az functionapp deployment slot create --name $funcappname -g $group --slot staging
