@@ -70,9 +70,7 @@ az eventgrid event-subscription create `
   --subject-begins-with "/blobServices/default/containers/images/blobs/" `
   --name $evtgridsubname `
   --endpoint-type webhook `
-  --endpoint "https://laazfuncs1.azurewebsites.net/runtime/webhooks/eventgrid?functionName=EventGridFunction&code=azqCvu0MOwADI3XmFNxbjPviHDT8DzNtIDqq2z5rFj1XdefmaUU/IA=="
-
+  --endpoint "$endpoint"
 
 az eventgrid event-subscription list -l $location -g $group
 
-Invoke-WebRequest -Uri "https://laazfuncs1.azurewebsites.net/runtime/webhooks/eventgrid?FunctionName=EventGridFunction&code=azqCvu0MOwADI3XmFNxbjPviHDT8DzNtIDqq2z5rFj1XdefmaUU/IA=="

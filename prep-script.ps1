@@ -1,5 +1,4 @@
 choco install nodejs-lts -y --force
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 npm i -g azure-functions-core-tools@3 --unsafe-perm true
 code --install-extension ms-vscode.csharp 
 code --install-extension ms-vscode.azurecli
